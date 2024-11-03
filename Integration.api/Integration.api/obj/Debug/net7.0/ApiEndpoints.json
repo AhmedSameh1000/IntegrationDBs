@@ -1,0 +1,218 @@
+[
+  {
+    "ContainingType": "EcommerceWebsite.Controllers.AuthController",
+    "Method": "LogIn",
+    "RelativePath": "api/Auth/LogIn",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "logInDTo",
+        "Type": "AutoRepairPro.Business.DTO.AuthDTOs.LogInDTo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Integration.api.Controllers.DynamicFromDBController",
+    "Method": "GetTableColumns",
+    "RelativePath": "api/DynamicFromDB/columns/{tableName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tableName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Integration.api.Controllers.DynamicFromDBController",
+    "Method": "GetTables",
+    "RelativePath": "api/DynamicFromDB/tables",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Integration.api.Controllers.DynamicToDBController",
+    "Method": "GetTableColumns",
+    "RelativePath": "api/DynamicToDB/columns/{tableName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tableName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Integration.api.Controllers.DynamicToDBController",
+    "Method": "GetTableNames",
+    "RelativePath": "api/DynamicToDB/tables",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FromDbController",
+    "Method": "GetFromById",
+    "RelativePath": "api/FromDb/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FromDbController",
+    "Method": "AddFromDataBase",
+    "RelativePath": "api/FromDb/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fromDbToAddDTO",
+        "Type": "Integration.business.DTOs.FromDTOs.DbToAddDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FromDbController",
+    "Method": "EditFromDataBase",
+    "RelativePath": "api/FromDb/edit",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fromDbToEditDTO",
+        "Type": "Integration.business.DTOs.FromDTOs.DbToEditDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FromDbController",
+    "Method": "GetFromList",
+    "RelativePath": "api/FromDb/list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FromDbController",
+    "Method": "SelectFromDataBase",
+    "RelativePath": "api/FromDb/select/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Integration.api.Controllers.ToDbController",
+    "Method": "GetToById",
+    "RelativePath": "api/ToDb/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Integration.api.Controllers.ToDbController",
+    "Method": "AddToDataBase",
+    "RelativePath": "api/ToDb/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ToDbToAddDTO",
+        "Type": "Integration.business.DTOs.FromDTOs.DbToAddDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Integration.api.Controllers.ToDbController",
+    "Method": "EditToDataBase",
+    "RelativePath": "api/ToDb/edit",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ToDbToEditDTO",
+        "Type": "Integration.business.DTOs.FromDTOs.DbToEditDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Integration.api.Controllers.ToDbController",
+    "Method": "GetToList",
+    "RelativePath": "api/ToDb/list",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Integration.api.Controllers.ToDbController",
+    "Method": "SelectToDataBase",
+    "RelativePath": "api/ToDb/select/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
