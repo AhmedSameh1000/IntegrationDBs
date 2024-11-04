@@ -142,6 +142,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Integration.api.Controllers.TestController",
+    "Method": "Test",
+    "RelativePath": "api/Test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "moduleId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Integration.api.Controllers.TestController",
+    "Method": "Test2",
+    "RelativePath": "api/Test/Dynamic",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Integration.api.Controllers.ToDbController",
     "Method": "GetToById",
     "RelativePath": "api/ToDb/{id}",

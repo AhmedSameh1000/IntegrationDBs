@@ -139,6 +139,179 @@ namespace Integration.data.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("Integration.data.Models.ColumnFrom", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ColumnToName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("tableFromId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("tableFromId");
+
+                    b.ToTable("columnFroms");
+                });
+
+            modelBuilder.Entity("Integration.data.Models.ColumnTo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("tableToId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("tableToId");
+
+                    b.ToTable("columnTos");
+                });
+
+            modelBuilder.Entity("Integration.data.Models.ConditionFrom", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ModuleId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Operation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ModuleId");
+
+                    b.ToTable("conditionFroms");
+                });
+
+            modelBuilder.Entity("Integration.data.Models.ConditionTo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ModuleId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Operation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ModuleId");
+
+                    b.ToTable("ConditionTos");
+                });
+
+            modelBuilder.Entity("Integration.data.Models.Module", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TableFromId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TableToId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TableFromId");
+
+                    b.HasIndex("TableToId");
+
+                    b.ToTable("modules");
+                });
+
+            modelBuilder.Entity("Integration.data.Models.TableFrom", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("FromDbId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("TableToId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FromDbId");
+
+                    b.ToTable("tableFroms");
+                });
+
+            modelBuilder.Entity("Integration.data.Models.TableTo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("TableFromId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ToDbId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TableFromId")
+                        .IsUnique()
+                        .HasFilter("[TableFromId] IS NOT NULL");
+
+                    b.HasIndex("ToDbId");
+
+                    b.ToTable("tableTos");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -272,6 +445,98 @@ namespace Integration.data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Integration.data.Models.ColumnFrom", b =>
+                {
+                    b.HasOne("Integration.data.Models.TableFrom", "tableFrom")
+                        .WithMany("ColumnFromList")
+                        .HasForeignKey("tableFromId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("tableFrom");
+                });
+
+            modelBuilder.Entity("Integration.data.Models.ColumnTo", b =>
+                {
+                    b.HasOne("Integration.data.Models.TableTo", "TableTo")
+                        .WithMany("ColumnToList")
+                        .HasForeignKey("tableToId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TableTo");
+                });
+
+            modelBuilder.Entity("Integration.data.Models.ConditionFrom", b =>
+                {
+                    b.HasOne("Integration.data.Models.Module", "Module")
+                        .WithMany("conditionFroms")
+                        .HasForeignKey("ModuleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Module");
+                });
+
+            modelBuilder.Entity("Integration.data.Models.ConditionTo", b =>
+                {
+                    b.HasOne("Integration.data.Models.Module", "Module")
+                        .WithMany("ConditionTos")
+                        .HasForeignKey("ModuleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Module");
+                });
+
+            modelBuilder.Entity("Integration.data.Models.Module", b =>
+                {
+                    b.HasOne("Integration.data.Models.TableFrom", "TableFrom")
+                        .WithMany()
+                        .HasForeignKey("TableFromId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Integration.data.Models.TableTo", "TableTo")
+                        .WithMany()
+                        .HasForeignKey("TableToId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TableFrom");
+
+                    b.Navigation("TableTo");
+                });
+
+            modelBuilder.Entity("Integration.data.Models.TableFrom", b =>
+                {
+                    b.HasOne("AutoRepairPro.Data.Models.FromDb", "FromDb")
+                        .WithMany()
+                        .HasForeignKey("FromDbId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("FromDb");
+                });
+
+            modelBuilder.Entity("Integration.data.Models.TableTo", b =>
+                {
+                    b.HasOne("Integration.data.Models.TableFrom", "TableFrom")
+                        .WithOne("TableTo")
+                        .HasForeignKey("Integration.data.Models.TableTo", "TableFromId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("AutoRepairPro.Data.Models.ToDb", "ToDb")
+                        .WithMany()
+                        .HasForeignKey("ToDbId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TableFrom");
+
+                    b.Navigation("ToDb");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -321,6 +586,26 @@ namespace Integration.data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Integration.data.Models.Module", b =>
+                {
+                    b.Navigation("ConditionTos");
+
+                    b.Navigation("conditionFroms");
+                });
+
+            modelBuilder.Entity("Integration.data.Models.TableFrom", b =>
+                {
+                    b.Navigation("ColumnFromList");
+
+                    b.Navigation("TableTo")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Integration.data.Models.TableTo", b =>
+                {
+                    b.Navigation("ColumnToList");
                 });
 #pragma warning restore 612, 618
         }

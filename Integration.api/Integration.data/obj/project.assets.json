@@ -3973,11 +3973,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahmed\\Desktop\\Integration\\Integration.api\\Integration.data\\Integration.data.csproj",
+      "projectUniqueName": "C:\\Users\\ahmed\\Desktop\\Test\\IntegrationDBs\\Integration.api\\Integration.data\\Integration.data.csproj",
       "projectName": "Integration.data",
-      "projectPath": "C:\\Users\\ahmed\\Desktop\\Integration\\Integration.api\\Integration.data\\Integration.data.csproj",
+      "projectPath": "C:\\Users\\ahmed\\Desktop\\Test\\IntegrationDBs\\Integration.api\\Integration.data\\Integration.data.csproj",
       "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahmed\\Desktop\\Integration\\Integration.api\\Integration.data\\obj\\",
+      "outputPath": "C:\\Users\\ahmed\\Desktop\\Test\\IntegrationDBs\\Integration.api\\Integration.data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",

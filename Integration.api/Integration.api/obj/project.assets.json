@@ -4430,11 +4430,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahmed\\Desktop\\Integration\\Integration.api\\Integration.api\\Integration.api.csproj",
+      "projectUniqueName": "C:\\Users\\ahmed\\Desktop\\Test\\IntegrationDBs\\Integration.api\\Integration.api\\Integration.api.csproj",
       "projectName": "Integration.api",
-      "projectPath": "C:\\Users\\ahmed\\Desktop\\Integration\\Integration.api\\Integration.api\\Integration.api.csproj",
+      "projectPath": "C:\\Users\\ahmed\\Desktop\\Test\\IntegrationDBs\\Integration.api\\Integration.api\\Integration.api.csproj",
       "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahmed\\Desktop\\Integration\\Integration.api\\Integration.api\\obj\\",
+      "outputPath": "C:\\Users\\ahmed\\Desktop\\Test\\IntegrationDBs\\Integration.api\\Integration.api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4452,8 +4452,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\ahmed\\Desktop\\Integration\\Integration.api\\Integration.business\\Integration.business.csproj": {
-              "projectPath": "C:\\Users\\ahmed\\Desktop\\Integration\\Integration.api\\Integration.business\\Integration.business.csproj"
+            "C:\\Users\\ahmed\\Desktop\\Test\\IntegrationDBs\\Integration.api\\Integration.business\\Integration.business.csproj": {
+              "projectPath": "C:\\Users\\ahmed\\Desktop\\Test\\IntegrationDBs\\Integration.api\\Integration.business\\Integration.business.csproj"
             }
           }
         }
