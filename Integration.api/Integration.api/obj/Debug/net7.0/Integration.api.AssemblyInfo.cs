@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Integration.api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ee0fc2f2ed03d27a578e21c12126294281184c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4517b755f8ec86b52ffbd6a2b8c9e665c40ea801")]
 [assembly: System.Reflection.AssemblyProductAttribute("Integration.api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Integration.api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

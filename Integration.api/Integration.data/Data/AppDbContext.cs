@@ -22,6 +22,8 @@ namespace Integration.data.Data
         public DbSet<ColumnTo>  columnTos{ get; set; }
         public DbSet<ConditionFrom>  conditionFroms { get; set; }
         public DbSet<ConditionTo>  ConditionTos{ get; set; }
+        public DbSet<TableReference> References { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Configure one-to-one relationship between TableFrom and TableTo

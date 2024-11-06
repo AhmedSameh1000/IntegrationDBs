@@ -4,6 +4,7 @@ using Integration.data.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Integration.data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241105092015_addNewData")]
+    partial class addNewData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -295,41 +298,6 @@ namespace Integration.data.Migrations
                     b.ToTable("tableFroms");
                 });
 
-            modelBuilder.Entity("Integration.data.Models.TableReference", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("CloudPrimaryReferanceName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LocalPrimary")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("TableFromId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TableToId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("cloudLocalName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("TableFromId");
-
-                    b.HasIndex("TableToId");
-
-                    b.ToTable("References");
-                });
-
             modelBuilder.Entity("Integration.data.Models.TableTo", b =>
                 {
                     b.Property<int>("Id")
@@ -564,25 +532,6 @@ namespace Integration.data.Migrations
                         .IsRequired();
 
                     b.Navigation("FromDb");
-                });
-
-            modelBuilder.Entity("Integration.data.Models.TableReference", b =>
-                {
-                    b.HasOne("Integration.data.Models.TableFrom", "TableFrom")
-                        .WithMany()
-                        .HasForeignKey("TableFromId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Integration.data.Models.TableTo", "TableTo")
-                        .WithMany()
-                        .HasForeignKey("TableToId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("TableFrom");
-
-                    b.Navigation("TableTo");
                 });
 
             modelBuilder.Entity("Integration.data.Models.TableTo", b =>

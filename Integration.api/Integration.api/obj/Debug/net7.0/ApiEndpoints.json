@@ -159,8 +159,8 @@
   },
   {
     "ContainingType": "Integration.api.Controllers.TestController",
-    "Method": "Test2",
-    "RelativePath": "api/Test/Dynamic",
+    "Method": "GetIds",
+    "RelativePath": "api/Test/GetIds",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
