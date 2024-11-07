@@ -158,16 +158,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Integration.api.Controllers.TestController",
-    "Method": "GetIds",
-    "RelativePath": "api/Test/GetIds",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "Integration.api.Controllers.ToDbController",
     "Method": "GetToById",
     "RelativePath": "api/ToDb/{id}",

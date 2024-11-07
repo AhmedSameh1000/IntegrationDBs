@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ahmed\\Desktop\\Test\\IntegrationDBs\\Integration.api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3F5C2D6-AD38-44A6-8DC6-AEEF00DA8F59}|Integration.api\\Integration.api.csproj|c:\\users\\ahmed\\desktop\\test\\integrationdbs\\integration.api\\integration.api\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3F5C2D6-AD38-44A6-8DC6-AEEF00DA8F59}|Integration.api\\Integration.api.csproj|solutionrelative:integration.api\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3F5C2D6-AD38-44A6-8DC6-AEEF00DA8F59}|Integration.api\\Integration.api.csproj|c:\\users\\ahmed\\desktop\\test\\integrationdbs\\integration.api\\integration.api\\controllers\\fromdbcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3F5C2D6-AD38-44A6-8DC6-AEEF00DA8F59}|Integration.api\\Integration.api.csproj|solutionrelative:integration.api\\controllers\\fromdbcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{065712C9-FCBD-4F90-B2F7-4813E2982A89}|Integration.data\\Integration.data.csproj|c:\\users\\ahmed\\desktop\\test\\integrationdbs\\integration.api\\integration.data\\models\\tablefrom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{065712C9-FCBD-4F90-B2F7-4813E2982A89}|Integration.data\\Integration.data.csproj|solutionrelative:integration.data\\models\\tablefrom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3F5C2D6-AD38-44A6-8DC6-AEEF00DA8F59}|Integration.api\\Integration.api.csproj|c:\\users\\ahmed\\desktop\\test\\integrationdbs\\integration.api\\integration.api\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3F5C2D6-AD38-44A6-8DC6-AEEF00DA8F59}|Integration.api\\Integration.api.csproj|solutionrelative:integration.api\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TableFrom.cs",
-              "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\Test\\IntegrationDBs\\Integration.api\\Integration.data\\Models\\TableFrom.cs",
-              "RelativeDocumentMoniker": "Integration.data\\Models\\TableFrom.cs",
-              "ToolTip": "C:\\Users\\ahmed\\Desktop\\Test\\IntegrationDBs\\Integration.api\\Integration.data\\Models\\TableFrom.cs",
-              "RelativeToolTip": "Integration.data\\Models\\TableFrom.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAywDIAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T11:05:08.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "TestController.cs",
               "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\Test\\IntegrationDBs\\Integration.api\\Integration.api\\Controllers\\TestController.cs",
               "RelativeDocumentMoniker": "Integration.api\\Controllers\\TestController.cs",
               "ToolTip": "C:\\Users\\ahmed\\Desktop\\Test\\IntegrationDBs\\Integration.api\\Integration.api\\Controllers\\TestController.cs",
               "RelativeToolTip": "Integration.api\\Controllers\\TestController.cs",
-              "ViewState": "AgIAAO8EAAAAAAAAAAA7wK0FAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAANsFAAAAAAAAAAAQwOsFAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T14:38:27.864Z",
+              "WhenOpened": "2024-11-07T12:17:48.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FromDbController.cs",
+              "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\Test\\IntegrationDBs\\Integration.api\\Integration.api\\Controllers\\FromDbController.cs",
+              "RelativeDocumentMoniker": "Integration.api\\Controllers\\FromDbController.cs",
+              "ToolTip": "C:\\Users\\ahmed\\Desktop\\Test\\IntegrationDBs\\Integration.api\\Integration.api\\Controllers\\FromDbController.cs",
+              "RelativeToolTip": "Integration.api\\Controllers\\FromDbController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T12:17:46.043Z",
               "EditorCaption": ""
             }
           ]
