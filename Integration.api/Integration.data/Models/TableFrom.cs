@@ -11,6 +11,7 @@ namespace Integration.data.Models
         public TableTo TableTo { get; set; }   
 
         public List<ColumnFrom > ColumnFromList { get; set; }
+        public List<TableReference> tableReferences { get; set; }
     }  
     public class TableTo
     {
@@ -46,7 +47,10 @@ namespace Integration.data.Models
         public int tableFromId { get; set; }
         public string ColumnToName { get; set; }
         public TableFrom tableFrom { get; set; }
+        public bool isReference { get; set; }
+        public string? TableToName { get; set; }
     }
+
 
     public class ColumnTo
     {
@@ -82,6 +86,11 @@ namespace Integration.data.Models
         public string LocalPrimary { get; set; }
         public string cloudLocalName { get; set; }
         public string CloudPrimaryReferanceName { get; set; }
+        public int? ModuleId { get; set; }
+        public Module Module { get; set; }
     }
+
+
 }
+
 
